@@ -10,10 +10,12 @@ public sealed class TurretComponent : BaseComponent
 	[Property] GameObject Bullet { get; set; }
 	[Property] GameObject SecondaryBullet { get; set; }
 	[Property] GameObject Muzzle { get; set; }
+	
+	[Property] public Action<TurretComponent> OnShoot { get; set; }
 
 	float turretYaw;
 	float turretPitch;
-
+	
 	TimeSince timeSinceLastSecondary;
 
 	public override void Update()
