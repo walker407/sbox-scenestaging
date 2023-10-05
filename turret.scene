@@ -2214,6 +2214,50 @@
           "Bullet": "bullet.object",
           "Gun": "99e832d5-87ef-4bd1-a3c2-39ba2c536618",
           "Muzzle": "432c5a69-3822-4504-a15f-5d7b652de9fc",
+          "OnShoot": {
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "event",
+                "Properties": {
+                  "name": "event"
+                },
+                "UserData": {
+                  "Position": "-464,-160"
+                }
+              },
+              {
+                "Id": 1,
+                "Type": "log.info",
+                "UserData": {
+                  "Position": "-192,-160"
+                }
+              }
+            ],
+            "Links": [
+              [
+                0,
+                "signal",
+                1,
+                "signal"
+              ],
+              [
+                0,
+                "turret",
+                1,
+                "args",
+                0
+              ],
+              [
+                0,
+                "bullet",
+                1,
+                "args",
+                1
+              ]
+            ]
+          },
           "SecondaryBullet": "cube.object"
         }
       ],
