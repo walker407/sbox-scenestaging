@@ -2224,41 +2224,253 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-464,-160"
+                  "Position": "-112,-96"
                 }
               },
               {
                 "Id": 1,
-                "Type": "log.info",
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameObject",
+                  "property": "Physics"
+                },
                 "UserData": {
-                  "Position": "-192,-160"
+                  "Position": "624,144"
+                }
+              },
+              {
+                "Id": 2,
+                "Type": "property.set",
+                "Properties": {
+                  "type": "package.facepunch.testbed/PhysicsComponent",
+                  "property": "Velocity"
+                },
+                "UserData": {
+                  "Position": "1424,112"
+                }
+              },
+              {
+                "Id": 3,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/TurretComponent",
+                  "property": "Muzzle"
+                },
+                "UserData": {
+                  "Position": "304,240"
+                }
+              },
+              {
+                "Id": 8,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameObject",
+                  "property": "WorldTransform"
+                },
+                "UserData": {
+                  "Position": "592,272"
+                }
+              },
+              {
+                "Id": 5,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "Sandbox.System/Transform",
+                  "property": "Forward"
+                },
+                "UserData": {
+                  "Position": "832,304"
+                }
+              },
+              {
+                "Id": 6,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/TurretComponent",
+                  "property": "ShootVelocity"
+                },
+                "UserData": {
+                  "Position": "320,400"
+                }
+              },
+              {
+                "Id": 7,
+                "Type": "op.multiply",
+                "UserData": {
+                  "Position": "1104,336"
+                }
+              },
+              {
+                "Id": 12,
+                "Type": "property.set",
+                "Properties": {
+                  "type": "package.facepunch.testbed/ModelComponent",
+                  "property": "Tint"
+                },
+                "UserData": {
+                  "Position": "896,-208"
+                }
+              },
+              {
+                "Id": 11,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameObject",
+                  "property": "Renderer"
+                },
+                "UserData": {
+                  "Position": "560,-176"
+                }
+              },
+              {
+                "Id": 13,
+                "Type": "while",
+                "UserData": {
+                  "Position": "576,-304"
+                }
+              },
+              {
+                "Id": 14,
+                "Type": "random.color",
+                "UserData": {
+                  "Position": "576,-64"
+                }
+              },
+              {
+                "Id": 15,
+                "Type": "task.delay",
+                "Inputs": {
+                  "seconds": 0.1273985
+                },
+                "UserData": {
+                  "Position": "1200,-192"
+                }
+              },
+              {
+                "Id": 16,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameObject",
+                  "property": "Enabled"
+                },
+                "UserData": {
+                  "Position": "352,-96"
                 }
               }
             ],
             "Links": [
               [
                 0,
-                "signal",
+                "bullet",
                 1,
-                "signal"
+                "target"
               ],
               [
-                0,
-                "turret",
                 1,
-                "args",
-                0
+                "result",
+                2,
+                "target"
               ],
               [
                 0,
                 "bullet",
-                1,
-                "args",
-                1
+                11,
+                "target"
+              ],
+              [
+                0,
+                "turret",
+                3,
+                "target"
+              ],
+              [
+                8,
+                "result",
+                5,
+                "target"
+              ],
+              [
+                3,
+                "result",
+                8,
+                "target"
+              ],
+              [
+                0,
+                "turret",
+                6,
+                "target"
+              ],
+              [
+                5,
+                "result",
+                7,
+                "a"
+              ],
+              [
+                7,
+                "result",
+                2,
+                "value"
+              ],
+              [
+                6,
+                "result",
+                7,
+                "b"
+              ],
+              [
+                0,
+                "signal",
+                13,
+                "signal"
+              ],
+              [
+                0,
+                "signal",
+                2,
+                "signal"
+              ],
+              [
+                11,
+                "result",
+                12,
+                "target"
+              ],
+              [
+                13,
+                "body",
+                12,
+                "signal"
+              ],
+              [
+                14,
+                "result",
+                12,
+                "value"
+              ],
+              [
+                12,
+                "signal",
+                15,
+                "signal"
+              ],
+              [
+                0,
+                "bullet",
+                16,
+                "target"
+              ],
+              [
+                16,
+                "result",
+                13,
+                "condition"
               ]
             ]
           },
-          "SecondaryBullet": "cube.object"
+          "SecondaryBullet": "cube.object",
+          "ShootVelocity": 300
         }
       ],
       "Children": [
