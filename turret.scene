@@ -2304,7 +2304,7 @@
                   "property": "Tint"
                 },
                 "UserData": {
-                  "Position": "896,-208"
+                  "Position": "896,-224"
                 }
               },
               {
@@ -2329,7 +2329,7 @@
                 "Id": 14,
                 "Type": "random.color",
                 "UserData": {
-                  "Position": "576,-64"
+                  "Position": "560,-96"
                 }
               },
               {
@@ -2350,7 +2350,58 @@
                   "property": "Enabled"
                 },
                 "UserData": {
-                  "Position": "352,-96"
+                  "Position": "224,-288"
+                }
+              },
+              {
+                "Id": 17,
+                "Type": "const.float",
+                "Properties": {
+                  "name": "Shoot Force",
+                  "value": 1000
+                },
+                "UserData": {
+                  "Position": "832,384"
+                }
+              },
+              {
+                "Id": 18,
+                "Type": "const.float",
+                "Properties": {
+                  "name": "Color Change Delay",
+                  "value": 0.125
+                },
+                "UserData": {
+                  "Position": "992,-16"
+                }
+              },
+              {
+                "Id": 19,
+                "Type": "property.set",
+                "Properties": {
+                  "type": "package.facepunch.testbed/ModelComponent",
+                  "property": "Tint"
+                },
+                "UserData": {
+                  "Position": "1456,-160"
+                }
+              },
+              {
+                "Id": 20,
+                "Type": "const.color",
+                "Properties": {
+                  "name": "",
+                  "value": "0,0,0,1"
+                },
+                "UserData": {
+                  "Position": "1232,-80"
+                }
+              },
+              {
+                "Id": 21,
+                "Type": "task.delay",
+                "UserData": {
+                  "Position": "1712,-64"
                 }
               }
             ],
@@ -2450,6 +2501,48 @@
                 "result",
                 13,
                 "condition"
+              ],
+              [
+                17,
+                "result",
+                7,
+                "b"
+              ],
+              [
+                18,
+                "result",
+                15,
+                "seconds"
+              ],
+              [
+                11,
+                "result",
+                19,
+                "target"
+              ],
+              [
+                15,
+                "signal",
+                19,
+                "signal"
+              ],
+              [
+                20,
+                "result",
+                19,
+                "value"
+              ],
+              [
+                19,
+                "signal",
+                21,
+                "signal"
+              ],
+              [
+                18,
+                "result",
+                21,
+                "seconds"
               ]
             ]
           },
