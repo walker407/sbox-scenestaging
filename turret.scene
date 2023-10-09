@@ -2283,21 +2283,17 @@
                 }
               },
               {
-                "Id": 6,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/TurretComponent",
-                  "property": "ShootVelocity"
-                },
-                "UserData": {
-                  "Position": "320,400"
-                }
-              },
-              {
                 "Id": 7,
                 "Type": "op.multiply",
+                "Inputs": {
+                  "b": {
+                    "$type": "Simple",
+                    "Type": "System.Private.CoreLib/System.Single",
+                    "Value": 1000
+                  }
+                },
                 "UserData": {
-                  "Position": "1104,336"
+                  "Position": "1072,304"
                 }
               },
               {
@@ -2340,7 +2336,7 @@
                 "Id": 15,
                 "Type": "task.delay",
                 "Inputs": {
-                  "seconds": 0.1273985
+                  "seconds": 0.25
                 },
                 "UserData": {
                   "Position": "1200,-192"
@@ -2396,12 +2392,6 @@
                 "target"
               ],
               [
-                0,
-                "turret",
-                6,
-                "target"
-              ],
-              [
                 5,
                 "result",
                 7,
@@ -2412,12 +2402,6 @@
                 "result",
                 2,
                 "value"
-              ],
-              [
-                6,
-                "result",
-                7,
-                "b"
               ],
               [
                 0,
