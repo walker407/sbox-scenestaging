@@ -2224,184 +2224,91 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-224,-144"
+                  "Position": "-720,-112"
                 }
               },
               {
-                "Id": 1,
+                "Id": 31,
                 "Type": "property.get",
                 "Properties": {
                   "type": "package.facepunch.testbed/GameObject",
-                  "property": "Physics"
+                  "name": "Physics"
                 },
                 "UserData": {
-                  "Position": "624,144"
+                  "Position": "-80,-0"
                 }
               },
               {
-                "Id": 2,
+                "Id": 32,
                 "Type": "property.set",
                 "Properties": {
                   "type": "package.facepunch.testbed/PhysicsComponent",
-                  "property": "Velocity"
+                  "name": "Velocity"
                 },
                 "UserData": {
-                  "Position": "1424,112"
+                  "Position": "560,-48"
                 }
               },
               {
-                "Id": 3,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/TurretComponent",
-                  "property": "Muzzle"
-                },
-                "UserData": {
-                  "Position": "352,288"
-                }
-              },
-              {
-                "Id": 22,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameObject",
-                  "property": "Transform"
-                },
-                "UserData": {
-                  "Position": "528,288"
-                }
-              },
-              {
-                "Id": 23,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameTransform",
-                  "property": "Rotation"
-                },
-                "UserData": {
-                  "Position": "704,288"
-                }
-              },
-              {
-                "Id": 7,
+                "Id": 38,
                 "Type": "op.multiply",
-                "Inputs": {
-                  "b": {
-                    "$type": "Simple",
-                    "Type": "System.Private.CoreLib/System.Single",
-                    "Value": 1000
-                  }
-                },
                 "UserData": {
-                  "Position": "1072,304"
+                  "Position": "304,80"
                 }
               },
               {
-                "Id": 12,
-                "Type": "property.set",
-                "Properties": {
-                  "type": "package.facepunch.testbed/ModelComponent",
-                  "property": "Tint"
-                },
-                "UserData": {
-                  "Position": "1120,-288"
-                }
-              },
-              {
-                "Id": 11,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameObject",
-                  "property": "Renderer"
-                },
-                "UserData": {
-                  "Position": "816,-192"
-                }
-              },
-              {
-                "Id": 13,
-                "Type": "while",
-                "UserData": {
-                  "Position": "288,-352"
-                }
-              },
-              {
-                "Id": 14,
-                "Type": "random.color",
-                "UserData": {
-                  "Position": "816,-112"
-                }
-              },
-              {
-                "Id": 15,
-                "Type": "task.delay",
-                "Inputs": {
-                  "seconds": 0.25
-                },
-                "UserData": {
-                  "Position": "800,-384"
-                }
-              },
-              {
-                "Id": 16,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameObject",
-                  "property": "Enabled"
-                },
-                "UserData": {
-                  "Position": "-16,-336"
-                }
-              },
-              {
-                "Id": 17,
+                "Id": 39,
                 "Type": "const.float",
                 "Properties": {
                   "name": "Shoot Force",
                   "value": 1000
                 },
                 "UserData": {
-                  "Position": "832,384"
+                  "Position": "96,160"
                 }
               },
               {
-                "Id": 18,
-                "Type": "const.float",
-                "Properties": {
-                  "name": "Color Change Delay",
-                  "value": 0.125
-                },
-                "UserData": {
-                  "Position": "576,-368"
-                }
-              },
-              {
-                "Id": 24,
+                "Id": 41,
                 "Type": "property.get",
                 "Properties": {
-                  "type": "Sandbox.System/Rotation",
-                  "property": "Forward"
+                  "type": "package.facepunch.testbed/TurretComponent",
+                  "name": "Muzzle"
                 },
                 "UserData": {
-                  "Position": "880,288"
+                  "Position": "-448,80"
                 }
               },
               {
-                "Id": 25,
+                "Id": 42,
                 "Type": "property.get",
                 "Properties": {
                   "type": "package.facepunch.testbed/GameObject",
-                  "property": "Children"
+                  "name": "Transform"
                 },
                 "UserData": {
-                  "Position": "256,-208"
+                  "Position": "-272,80"
                 }
               },
               {
-                "Id": 26,
-                "Type": "foreach",
+                "Id": 43,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameTransform",
+                  "name": "Rotation"
+                },
                 "UserData": {
-                  "Position": "560,-272"
+                  "Position": "-96,80"
+                }
+              },
+              {
+                "Id": 44,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "Sandbox.System/Rotation",
+                  "name": "Forward"
+                },
+                "UserData": {
+                  "Position": "80,80"
                 }
               }
             ],
@@ -2409,134 +2316,62 @@
               [
                 0,
                 "bullet",
-                1,
+                31,
                 "target"
               ],
               [
-                1,
+                31,
                 "result",
-                2,
+                32,
                 "target"
               ],
               [
-                26,
-                "body.value",
-                11,
-                "target"
+                0,
+                "signal",
+                32,
+                "signal"
+              ],
+              [
+                39,
+                "result",
+                38,
+                "b"
+              ],
+              [
+                38,
+                "result",
+                32,
+                "value"
               ],
               [
                 0,
                 "turret",
-                3,
+                41,
                 "target"
               ],
               [
-                3,
+                41,
                 "result",
-                22,
+                42,
                 "target"
               ],
               [
-                23,
+                42,
                 "result",
-                24,
+                43,
                 "target"
               ],
               [
-                22,
+                43,
                 "result",
-                23,
+                44,
                 "target"
               ],
               [
-                7,
+                44,
                 "result",
-                2,
-                "value"
-              ],
-              [
-                0,
-                "signal",
-                13,
-                "signal"
-              ],
-              [
-                0,
-                "signal",
-                2,
-                "signal"
-              ],
-              [
-                11,
-                "result",
-                12,
-                "target"
-              ],
-              [
-                26,
-                "body",
-                12,
-                "signal"
-              ],
-              [
-                14,
-                "result",
-                12,
-                "value"
-              ],
-              [
-                26,
-                "signal",
-                15,
-                "signal"
-              ],
-              [
-                0,
-                "bullet",
-                16,
-                "target"
-              ],
-              [
-                16,
-                "result",
-                13,
-                "condition"
-              ],
-              [
-                17,
-                "result",
-                7,
-                "b"
-              ],
-              [
-                18,
-                "result",
-                15,
-                "seconds"
-              ],
-              [
-                24,
-                "result",
-                7,
+                38,
                 "a"
-              ],
-              [
-                0,
-                "bullet",
-                25,
-                "target"
-              ],
-              [
-                13,
-                "body",
-                26,
-                "signal"
-              ],
-              [
-                25,
-                "result",
-                26,
-                "enumerable"
               ]
             ],
             "UserData": {
@@ -2755,6 +2590,14 @@
           "ZNear": 1
         }
       ]
+    },
+    {
+      "Id": "ea137180-fe94-4144-967a-3eebaf272630",
+      "Name": "Object",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1"
     }
   ],
   "__references": []
