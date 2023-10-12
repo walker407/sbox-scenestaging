@@ -2224,7 +2224,7 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-112,-96"
+                  "Position": "-224,-144"
                 }
               },
               {
@@ -2304,7 +2304,7 @@
                   "property": "Tint"
                 },
                 "UserData": {
-                  "Position": "896,-304"
+                  "Position": "1120,-288"
                 }
               },
               {
@@ -2315,21 +2315,21 @@
                   "property": "Renderer"
                 },
                 "UserData": {
-                  "Position": "560,-176"
+                  "Position": "816,-192"
                 }
               },
               {
                 "Id": 13,
                 "Type": "while",
                 "UserData": {
-                  "Position": "560,-320"
+                  "Position": "288,-352"
                 }
               },
               {
                 "Id": 14,
                 "Type": "random.color",
                 "UserData": {
-                  "Position": "560,-96"
+                  "Position": "816,-112"
                 }
               },
               {
@@ -2339,7 +2339,7 @@
                   "seconds": 0.25
                 },
                 "UserData": {
-                  "Position": "1216,-256"
+                  "Position": "800,-384"
                 }
               },
               {
@@ -2350,7 +2350,7 @@
                   "property": "Enabled"
                 },
                 "UserData": {
-                  "Position": "240,-304"
+                  "Position": "-16,-336"
                 }
               },
               {
@@ -2372,36 +2372,7 @@
                   "value": 0.125
                 },
                 "UserData": {
-                  "Position": "992,-16"
-                }
-              },
-              {
-                "Id": 19,
-                "Type": "property.set",
-                "Properties": {
-                  "type": "package.facepunch.testbed/ModelComponent",
-                  "property": "Tint"
-                },
-                "UserData": {
-                  "Position": "1456,-160"
-                }
-              },
-              {
-                "Id": 20,
-                "Type": "const.color",
-                "Properties": {
-                  "name": "",
-                  "value": "0,0,0,1"
-                },
-                "UserData": {
-                  "Position": "1232,-80"
-                }
-              },
-              {
-                "Id": 21,
-                "Type": "task.delay",
-                "UserData": {
-                  "Position": "1712,-64"
+                  "Position": "576,-368"
                 }
               },
               {
@@ -2413,6 +2384,24 @@
                 },
                 "UserData": {
                   "Position": "880,288"
+                }
+              },
+              {
+                "Id": 25,
+                "Type": "property.get",
+                "Properties": {
+                  "type": "package.facepunch.testbed/GameObject",
+                  "property": "Children"
+                },
+                "UserData": {
+                  "Position": "256,-208"
+                }
+              },
+              {
+                "Id": 26,
+                "Type": "foreach",
+                "UserData": {
+                  "Position": "560,-272"
                 }
               }
             ],
@@ -2430,8 +2419,8 @@
                 "target"
               ],
               [
-                0,
-                "bullet",
+                26,
+                "body.value",
                 11,
                 "target"
               ],
@@ -2484,7 +2473,7 @@
                 "target"
               ],
               [
-                13,
+                26,
                 "body",
                 12,
                 "signal"
@@ -2496,7 +2485,7 @@
                 "value"
               ],
               [
-                12,
+                26,
                 "signal",
                 15,
                 "signal"
@@ -2526,42 +2515,34 @@
                 "seconds"
               ],
               [
-                11,
-                "result",
-                19,
-                "target"
-              ],
-              [
-                15,
-                "signal",
-                19,
-                "signal"
-              ],
-              [
-                20,
-                "result",
-                19,
-                "value"
-              ],
-              [
-                19,
-                "signal",
-                21,
-                "signal"
-              ],
-              [
-                18,
-                "result",
-                21,
-                "seconds"
-              ],
-              [
                 24,
                 "result",
                 7,
                 "a"
+              ],
+              [
+                0,
+                "bullet",
+                25,
+                "target"
+              ],
+              [
+                13,
+                "body",
+                26,
+                "signal"
+              ],
+              [
+                25,
+                "result",
+                26,
+                "enumerable"
               ]
-            ]
+            ],
+            "UserData": {
+              "name": "On Shoot",
+              "id": "cdcf61c4-3924-4a6a-90c3-3101c7984561"
+            }
           },
           "SecondaryBullet": "cube.object",
           "ShootVelocity": 300
