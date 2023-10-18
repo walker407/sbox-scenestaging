@@ -2224,91 +2224,18 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-720,-112"
+                  "Position": "-368,-160"
                 }
               },
               {
-                "Id": 31,
-                "Type": "property.get",
+                "Id": 2,
+                "Type": "call",
                 "Properties": {
-                  "type": "package.facepunch.testbed/GameObject",
-                  "name": "Physics"
+                  "_type": "package.facepunch.testbed/GameObject",
+                  "_name": "GetComponent"
                 },
                 "UserData": {
-                  "Position": "-80,-0"
-                }
-              },
-              {
-                "Id": 32,
-                "Type": "property.set",
-                "Properties": {
-                  "type": "package.facepunch.testbed/PhysicsComponent",
-                  "name": "Velocity"
-                },
-                "UserData": {
-                  "Position": "560,-48"
-                }
-              },
-              {
-                "Id": 38,
-                "Type": "op.multiply",
-                "UserData": {
-                  "Position": "304,80"
-                }
-              },
-              {
-                "Id": 39,
-                "Type": "const.float",
-                "Properties": {
-                  "name": "Shoot Force",
-                  "value": 1000
-                },
-                "UserData": {
-                  "Position": "96,160"
-                }
-              },
-              {
-                "Id": 41,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/TurretComponent",
-                  "name": "Muzzle"
-                },
-                "UserData": {
-                  "Position": "-448,80"
-                }
-              },
-              {
-                "Id": 42,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameObject",
-                  "name": "Transform"
-                },
-                "UserData": {
-                  "Position": "-272,80"
-                }
-              },
-              {
-                "Id": 43,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "package.facepunch.testbed/GameTransform",
-                  "name": "Rotation"
-                },
-                "UserData": {
-                  "Position": "-96,80"
-                }
-              },
-              {
-                "Id": 44,
-                "Type": "property.get",
-                "Properties": {
-                  "type": "Sandbox.System/Rotation",
-                  "name": "Forward"
-                },
-                "UserData": {
-                  "Position": "80,80"
+                  "Position": "16,-128"
                 }
               }
             ],
@@ -2316,67 +2243,19 @@
               [
                 0,
                 "bullet",
-                31,
-                "target"
-              ],
-              [
-                31,
-                "result",
-                32,
-                "target"
+                2,
+                "_target"
               ],
               [
                 0,
-                "signal",
-                32,
-                "signal"
-              ],
-              [
-                39,
-                "result",
-                38,
-                "b"
-              ],
-              [
-                38,
-                "result",
-                32,
-                "value"
-              ],
-              [
-                0,
-                "turret",
-                41,
-                "target"
-              ],
-              [
-                41,
-                "result",
-                42,
-                "target"
-              ],
-              [
-                42,
-                "result",
-                43,
-                "target"
-              ],
-              [
-                43,
-                "result",
-                44,
-                "target"
-              ],
-              [
-                44,
-                "result",
-                38,
-                "a"
+                "_signal",
+                2,
+                "_signal"
               ]
             ],
             "UserData": {
               "name": "On Shoot",
-              "id": "cdcf61c4-3924-4a6a-90c3-3101c7984561"
+              "id": "729df1c3-efee-412a-8ef8-af92e9b334fd"
             }
           },
           "SecondaryBullet": "cube.object",
