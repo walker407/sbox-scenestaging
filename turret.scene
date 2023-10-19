@@ -2224,18 +2224,105 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-368,-160"
+                  "Position": "-352,-144"
+                }
+              },
+              {
+                "Id": 1,
+                "Type": "call",
+                "Properties": {
+                  "_type": "package.facepunch.testbed/GameObject",
+                  "_name": "GetComponent",
+                  "T": {
+                    "$type": "Type",
+                    "Type": "package.facepunch.testbed/PhysicsComponent"
+                  }
+                },
+                "UserData": {
+                  "Position": "320,-80"
                 }
               },
               {
                 "Id": 2,
-                "Type": "call",
+                "Type": "property.set",
                 "Properties": {
-                  "_type": "package.facepunch.testbed/GameObject",
-                  "_name": "GetComponent"
+                  "_type": "package.facepunch.testbed/PhysicsComponent",
+                  "_name": "Velocity"
                 },
                 "UserData": {
-                  "Position": "16,-128"
+                  "Position": "1024,-128"
+                }
+              },
+              {
+                "Id": 11,
+                "Type": "property.get",
+                "Properties": {
+                  "_type": "package.facepunch.testbed/GameObject",
+                  "_name": "Transform"
+                },
+                "UserData": {
+                  "Position": "240,144"
+                }
+              },
+              {
+                "Id": 5,
+                "Type": "property.get",
+                "Properties": {
+                  "_type": "package.facepunch.testbed/GameTransform",
+                  "_name": "Rotation"
+                },
+                "UserData": {
+                  "Position": "416,144"
+                }
+              },
+              {
+                "Id": 6,
+                "Type": "property.get",
+                "Properties": {
+                  "_type": "Sandbox.System/Rotation",
+                  "_name": "Forward"
+                },
+                "UserData": {
+                  "Position": "592,144"
+                }
+              },
+              {
+                "Id": 7,
+                "Type": "op.multiply",
+                "UserData": {
+                  "Position": "784,144"
+                }
+              },
+              {
+                "Id": 12,
+                "Type": "property.get",
+                "Properties": {
+                  "_type": "package.facepunch.testbed/TurretComponent",
+                  "_name": "ShootVelocity"
+                },
+                "UserData": {
+                  "Position": "160,320"
+                }
+              },
+              {
+                "Id": 9,
+                "Type": "property.get",
+                "Properties": {
+                  "_type": "package.facepunch.testbed/TurretComponent",
+                  "_name": "Muzzle"
+                },
+                "UserData": {
+                  "Position": "64,144"
+                }
+              },
+              {
+                "Id": 14,
+                "Type": "const.sound",
+                "Properties": {
+                  "value": "sounds/weapons/extra-gunshot-i.vsnd"
+                },
+                "UserData": {
+                  "Position": "336,-272"
                 }
               }
             ],
@@ -2243,19 +2330,85 @@
               [
                 0,
                 "bullet",
-                2,
+                1,
                 "_target"
+              ],
+              [
+                0,
+                "turret",
+                9,
+                "target"
+              ],
+              [
+                1,
+                "_result",
+                2,
+                "target"
               ],
               [
                 0,
                 "_signal",
                 2,
                 "_signal"
+              ],
+              [
+                9,
+                "_result",
+                11,
+                "target"
+              ],
+              [
+                11,
+                "_result",
+                5,
+                "target"
+              ],
+              [
+                5,
+                "_result",
+                6,
+                "target"
+              ],
+              [
+                6,
+                "_result",
+                7,
+                "a"
+              ],
+              [
+                0,
+                "turret",
+                12,
+                "target"
+              ],
+              [
+                7,
+                "_result",
+                2,
+                "value"
+              ],
+              [
+                12,
+                "_result",
+                7,
+                "b"
               ]
             ],
             "UserData": {
               "name": "On Shoot",
-              "id": "729df1c3-efee-412a-8ef8-af92e9b334fd"
+              "id": "94c269b5-910d-41f7-957a-fe20418ec03f",
+              "comments": [
+                {
+                  "Size": "944,338",
+                  "Color": "Green",
+                  "Description": "",
+                  "Title": "Get Shoot Velocity",
+                  "Layer": 5,
+                  "DisplayInfo": {},
+                  "Identifier": "6289f635-81d0-4025-81d6-d3598ca2d9df",
+                  "Position": "32,64"
+                }
+              ]
             }
           },
           "SecondaryBullet": "cube.object",
