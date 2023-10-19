@@ -13,6 +13,7 @@ public partial class GameObject
 	/// <param name="enabledOnly"></param>
 	/// <param name="deep"></param>
 	/// <returns></returns>
+	[Pure]
 	public T GetComponent<T>( bool enabledOnly = true, bool deep = false )
 	{
 		return GetComponents<T>( enabledOnly, deep ).FirstOrDefault();
@@ -25,6 +26,7 @@ public partial class GameObject
 	/// <param name="enabledOnly"></param>
 	/// <param name="deep"></param>
 	/// <returns></returns>
+	[Pure]
 	public IEnumerable<T> GetComponents<T>( bool enabledOnly = true, bool deep = false )
 	{
 		var q = Components.Where( x => x is not null );
@@ -49,6 +51,7 @@ public partial class GameObject
 		}
 	}
 
+	[Pure]
 	public bool TryGetComponent<T>( out T component, bool enabledOnly = true, bool deep = false )
 	{
 		component = GetComponent<T>( enabledOnly, deep );
@@ -59,6 +62,7 @@ public partial class GameObject
 	/// <summary>
 	/// Find component on this gameobject, or its parents
 	/// </summary>
+	[Pure]
 	public T GetComponentInParent<T>( bool enabledOnly = true, bool andSelf = false )
 	{
 		if ( andSelf )
