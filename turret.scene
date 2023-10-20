@@ -2290,7 +2290,7 @@
                 "Id": 7,
                 "Type": "op.multiply",
                 "UserData": {
-                  "Position": "784,144"
+                  "Position": "816,192"
                 }
               },
               {
@@ -2301,7 +2301,7 @@
                   "_name": "ShootVelocity"
                 },
                 "UserData": {
-                  "Position": "160,320"
+                  "Position": "64,224"
                 }
               },
               {
@@ -2313,16 +2313,6 @@
                 },
                 "UserData": {
                   "Position": "64,144"
-                }
-              },
-              {
-                "Id": 14,
-                "Type": "const.sound",
-                "Properties": {
-                  "value": "sounds/weapons/extra-gunshot-i.vsnd"
-                },
-                "UserData": {
-                  "Position": "336,-272"
                 }
               }
             ],
@@ -2399,12 +2389,11 @@
               "id": "94c269b5-910d-41f7-957a-fe20418ec03f",
               "comments": [
                 {
-                  "Size": "944,338",
+                  "Size": "944,256",
                   "Color": "Green",
-                  "Description": "",
                   "Title": "Get Shoot Velocity",
-                  "Layer": 5,
-                  "DisplayInfo": {},
+                  "Description": "",
+                  "Layer": 1,
                   "Identifier": "6289f635-81d0-4025-81d6-d3598ca2d9df",
                   "Position": "32,64"
                 }
