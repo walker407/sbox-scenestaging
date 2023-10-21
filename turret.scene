@@ -2224,22 +2224,22 @@
                   "name": "event"
                 },
                 "UserData": {
-                  "Position": "-352,-144"
+                  "Position": "-320,-96"
                 }
               },
               {
                 "Id": 1,
                 "Type": "call",
                 "Properties": {
-                  "_type": "package.facepunch.testbed/GameObject",
-                  "_name": "GetComponent",
                   "T": {
                     "$type": "Type",
                     "Type": "package.facepunch.testbed/PhysicsComponent"
-                  }
+                  },
+                  "_type": "package.facepunch.testbed/GameObject",
+                  "_name": "GetComponent"
                 },
                 "UserData": {
-                  "Position": "320,-80"
+                  "Position": "736,-64"
                 }
               },
               {
@@ -2250,7 +2250,7 @@
                   "_name": "Velocity"
                 },
                 "UserData": {
-                  "Position": "1024,-128"
+                  "Position": "1120,-160"
                 }
               },
               {
@@ -2261,7 +2261,7 @@
                   "_name": "Transform"
                 },
                 "UserData": {
-                  "Position": "240,144"
+                  "Position": "272,176"
                 }
               },
               {
@@ -2272,7 +2272,7 @@
                   "_name": "Rotation"
                 },
                 "UserData": {
-                  "Position": "416,144"
+                  "Position": "448,176"
                 }
               },
               {
@@ -2283,14 +2283,14 @@
                   "_name": "Forward"
                 },
                 "UserData": {
-                  "Position": "592,144"
+                  "Position": "624,176"
                 }
               },
               {
                 "Id": 7,
                 "Type": "op.multiply",
                 "UserData": {
-                  "Position": "816,192"
+                  "Position": "848,240"
                 }
               },
               {
@@ -2301,7 +2301,7 @@
                   "_name": "ShootVelocity"
                 },
                 "UserData": {
-                  "Position": "64,224"
+                  "Position": "96,256"
                 }
               },
               {
@@ -2312,7 +2312,14 @@
                   "_name": "Muzzle"
                 },
                 "UserData": {
-                  "Position": "64,144"
+                  "Position": "96,176"
+                }
+              },
+              {
+                "Id": 23,
+                "Type": "nop",
+                "UserData": {
+                  "Position": "16,256"
                 }
               }
             ],
@@ -2324,9 +2331,9 @@
                 "_target"
               ],
               [
-                0,
-                "turret",
-                9,
+                23,
+                "out",
+                12,
                 "target"
               ],
               [
@@ -2366,9 +2373,9 @@
                 "a"
               ],
               [
-                0,
-                "turret",
-                12,
+                23,
+                "out",
+                9,
                 "target"
               ],
               [
@@ -2382,6 +2389,12 @@
                 "_result",
                 7,
                 "b"
+              ],
+              [
+                0,
+                "turret",
+                23,
+                "in"
               ]
             ],
             "UserData": {
@@ -2389,13 +2402,13 @@
               "id": "94c269b5-910d-41f7-957a-fe20418ec03f",
               "comments": [
                 {
-                  "Size": "944,256",
+                  "Size": "1024,272",
                   "Color": "Green",
                   "Title": "Get Shoot Velocity",
-                  "Description": "",
+                  "Description": "Muzzle direction multiplied by bullet speed",
                   "Layer": 1,
                   "Identifier": "6289f635-81d0-4025-81d6-d3598ca2d9df",
-                  "Position": "32,64"
+                  "Position": "-16,96"
                 }
               ]
             }
