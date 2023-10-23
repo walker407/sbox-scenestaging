@@ -1,0 +1,188 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "snek.vmat"
+								to = "models/materials/poisonstaff/snek.vmat"
+							},
+							{
+								from = "spiral.vmat"
+								to = "models/materials/poisonstaff/spiral.vmat"
+							},
+							{
+								from = "staff.vmat"
+								to = "models/materials/poisonstaff/staff.vmat"
+							},
+							{
+								from = "tube.vmat"
+								to = "models/materials/poisonstaff/tubule.vmat"
+							},
+						]
+						use_global_default = true
+						global_default_material = "materials/models/weapons/poisonstaff/poisonstaff.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/weapons/staffs/poisonboltstaff/staff_poison.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Mesh",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "eye_R"
+						parent_bone = "muzzle"
+						relative_origin = [ 7.16251, 2.12323, 46.474487 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "head"
+						parent_bone = "muzzle"
+						relative_origin = [ 0.0, 0.0, 46.627205 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "eye_L"
+						parent_bone = "muzzle"
+						relative_origin = [ -7.16251, 2.12323, 46.474499 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "muzzle"
+						origin = [ -0.002713, 1.028407, 6.954433 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+					{
+						_class = "Bone"
+						name = "hold_r"
+						origin = [ -0.002713, 0.028493, -10.088253 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "particle"
+						game_keys = 
+						{
+							name = resource:"particles/eyes_snake_01.vpcf"
+							attachment_point = "eye_R"
+							attachment_type = "5"
+							attachment_offset = [ 0.0, 0.0, 0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "particle"
+						game_keys = 
+						{
+							name = resource:"particles/eyes_snake_01.vpcf"
+							attachment_point = "eye_L"
+							attachment_type = "5"
+							attachment_offset = [ 0.0, 0.0, 0.0 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "particle"
+						game_keys = 
+						{
+							name = resource:"particles/eye_snake_portal_01.vpcf"
+							attachment_point = "head"
+							attachment_type = "5"
+							attachment_offset = [ 0.0, 0.0, 0.0 ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

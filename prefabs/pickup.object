@@ -1,0 +1,61 @@
+{
+  "RootObject": {
+    "Id": "56872292-9211-4604-970b-4c36411575d6",
+    "Name": "Spell Book Pickup",
+    "Enabled": true,
+    "Position": "-272.7795,0,0.1",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Components": [
+      {
+        "__type": "ParticleSystem",
+        "__enabled": true,
+        "Looped": false,
+        "Particles": "particles/book_particle/book_tentacle.vpcf",
+        "PlaybackSpeed": 1
+      },
+      {
+        "__type": "ParticleSystem",
+        "__enabled": true,
+        "Looped": false,
+        "Particles": "particles/book_particle/book_floor_portal.vpcf",
+        "PlaybackSpeed": 1
+      }
+    ],
+    "Children": [
+      {
+        "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
+        "Name": "Model",
+        "Enabled": true,
+        "Position": "0,0,31.79398",
+        "Rotation": "0,0,0.039321,0.9990347",
+        "Scale": "1,1,1",
+        "Components": [
+          {
+            "__type": "AnimatedModelComponent",
+            "__enabled": true,
+            "CreateBoneObjects": false,
+            "MaterialOverride": null,
+            "Model": "models/pickups/books/spellbook/spellbook.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ParticleSystem",
+            "__enabled": true,
+            "Looped": false,
+            "Particles": "particles/book_particle/book_glow.vpcf",
+            "PlaybackSpeed": 1
+          },
+          {
+            "__type": "BobAndSpinComponent",
+            "__enabled": true,
+            "Amplitude": 0.05,
+            "SpinAngles": "0,45,0"
+          }
+        ]
+      }
+    ]
+  },
+  "__references": []
+}

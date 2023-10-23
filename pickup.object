@@ -1,0 +1,11 @@
+{
+  "RootObject": {
+    "Id": "2197e5fb-9549-4be2-831f-1161a0409381",
+    "Name": "Pickup",
+    "Enabled": true,
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1"
+  },
+  "__references": []
+}

@@ -1,0 +1,15 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/noise/fbmwarp.shader"
+
+	g_Gain "0.5"
+	g_Lacunarity "2"
+	g_Octaves "10"
+	g_Scale "2"
+
+	//---- Material ----
+	TextureColor "materials/default/default_color.tga"
+	TextureTranslucency "materials/default/default_trans.tga"
+}

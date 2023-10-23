@@ -1,0 +1,177 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						name = "Default"
+						remaps = 
+						[
+							{
+								from = "flaskglass.vmat"
+								to = "models/materials/pickups/healflask/flaskglass.vmat"
+							},
+							{
+								from = "flasksolid.vmat"
+								to = "models/materials/pickups/healflask/flasksolid.vmat"
+							},
+							{
+								from = "flaskliquid.vmat"
+								to = "materials/models/pickups/flasks/liquid.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+					{
+						_class = "MaterialGroup"
+						name = "mana"
+						remaps = 
+						[
+							{
+								from = "materials/liquid/liquid.vmat"
+								to = "materials/liquid/liquid_mana.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "rejuvination"
+						remaps = 
+						[
+							{
+								from = "materials/liquid/liquid.vmat"
+								to = "materials/liquid/liquid_rejuvination.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "flask_body"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 25.0
+						center = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/pickups/flask/healflask.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "BoundsCenter"
+						align_origin_y_type = "BoundsCenter"
+						align_origin_z_type = "BoundsCenter"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "idle"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						enable_scale = false
+						source_filename = "models/pickups/flask/healflask.fbx"
+						start_frame = 0
+						end_frame = 59
+						framerate = 15.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						disabled = true
+						game_class = "particle"
+						game_keys = 
+						{
+							name = resource:"particles/flask_health_01.vpcf"
+							attachment_point = "flask_particle_light"
+							attachment_type = "5"
+							attachment_offset = [ -1.57161, 0.0, 103.667 ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "flask_particle"
+						parent_bone = "flask_body"
+						relative_origin = [ -0.422368, 0.0, -1.576283 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

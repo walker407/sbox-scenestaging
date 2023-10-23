@@ -1,0 +1,534 @@
+{
+  "GameObjects": [
+    {
+      "Id": "8da0fd81-3183-445e-b8eb-70dc6d6ce7c0",
+      "Name": "Surface",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "20,20,20",
+      "Components": [
+        {
+          "__type": "ModelComponent",
+          "__enabled": true,
+          "MaterialOverride": "materials/shine.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "ShouldCastShadows": true,
+          "Tint": "0.05882,0.13725,0.49412,1"
+        },
+        {
+          "__type": "ColliderBoxComponent",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Scale": "100,100,0.01",
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "167f84af-91a8-4f5e-9475-06e5c02fe37b",
+      "Name": "Citizen",
+      "Enabled": true,
+      "Position": "-75.62699,0,4",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 71.05,
+          "Radius": 11.65,
+          "StepHeight": 18
+        },
+        {
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "167f84af-91a8-4f5e-9475-06e5c02fe37b",
+          "Body": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
+          "CameraDistance": 200,
+          "Eye": "06423de2-a0bf-4b62-b759-1fa173600ef7",
+          "FirstPerson": false,
+          "Gravity": "0,0,800"
+        },
+        {
+          "__type": "CitizenAnimation",
+          "__enabled": true,
+          "Target": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e"
+        },
+        {
+          "__type": "PickupComponent",
+          "__enabled": true
+        }
+      ],
+      "Children": [
+        {
+          "Id": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
+          "Name": "Body",
+          "Enabled": true,
+          "Position": "0,-0.66093,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "08031565-c46d-44bb-8976-8f88aab087d4",
+              "Name": "Name Tag UI",
+              "Enabled": true,
+              "Position": "-0.000001814945,0.1895752,80.7357",
+              "Rotation": "-0.00000005960058,0.000000000000005518709,-0.9999317,0.01167414",
+              "Scale": "1,1,1",
+              "Components": [
+                {
+                  "__type": "WorldPanel",
+                  "__enabled": true,
+                  "HorizontalAlign": "Center",
+                  "LookAtCamera": true,
+                  "PanelSize": "1024,256",
+                  "RenderScale": 1,
+                  "VerticalAlign": "Center"
+                },
+                {
+                  "__type": "NameTagPanel",
+                  "__enabled": true,
+                  "Name": "Prickly Pete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "ae8557b8-49c2-48dd-b673-ee9e0821eae9",
+          "Name": "Camera",
+          "Enabled": true,
+          "Position": "-200,0,64",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "__enabled": true,
+              "BackgroundColor": "0.25292,0.26086,0.29703,1",
+              "ClearFlags": "Color, Depth, Stencil",
+              "FieldOfView": 80,
+              "ZFar": 10000,
+              "ZNear": 1
+            },
+            {
+              "__type": "FilmGrain",
+              "__enabled": false,
+              "Intensity": 0.03,
+              "Response": 1
+            },
+            {
+              "__type": "Vignette",
+              "__enabled": false,
+              "Center": "0.5,0.5",
+              "Color": "0,0,0,0.38",
+              "Intensity": 1,
+              "Roundness": 0.5,
+              "Smoothness": 1
+            },
+            {
+              "__type": "ChromaticAberration",
+              "__enabled": false,
+              "Offset": "4,6,4.049999",
+              "Scale": 0.2
+            },
+            {
+              "__type": "Sharpen",
+              "__enabled": true,
+              "Scale": 1
+            },
+            {
+              "__type": "Highlight",
+              "__enabled": true
+            },
+            {
+              "__type": "Bloom",
+              "__enabled": false,
+              "BloomColor": {
+                "color": [
+                  {
+                    "c": "1,1,1,1"
+                  },
+                  {
+                    "t": 1,
+                    "c": "0.5,0.5,0.5,1"
+                  }
+                ]
+              },
+              "BloomCurve": {
+                "rangey": "0,106.45",
+                "frames": [
+                  {},
+                  {
+                    "x": 1,
+                    "y": 1
+                  }
+                ]
+              },
+              "Mode": "Screen",
+              "Strength": 1,
+              "Threshold": 0.3,
+              "ThresholdWidth": 2
+            }
+          ]
+        },
+        {
+          "Id": "06423de2-a0bf-4b62-b759-1fa173600ef7",
+          "Name": "EyePos",
+          "Enabled": true,
+          "Position": "0,0,64",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1"
+        },
+        {
+          "Id": "f14db027-d364-497b-8fa4-e83d67466d21",
+          "Name": "Hair",
+          "Enabled": true,
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "BoneMergeTarget": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/citizen_clothes/hair/hair_fade/models/hair_fade.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "6a830c04-ef6d-43f3-a431-4bc92d6f85db",
+          "Name": "Hair",
+          "Enabled": true,
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "BoneMergeTarget": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/citizen_clothes/shoes/boots/models/army_boots.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "27360559-f3a6-43ca-a774-ce7431c4cecb",
+      "Name": "Cubemap",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "EnvmapComponent",
+          "__enabled": true,
+          "Bounds": {
+            "Mins": "-5120,-5120,-5120",
+            "Maxs": "5120,5120,5120"
+          },
+          "Projection": "Box",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "4a08460b-c593-4ea3-94e6-7dbde7c6039f",
+      "Name": "Directional Light",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0.8894004,0.1914825,-0.4057941,0.087365",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "DirectionalLightComponent",
+          "__enabled": true,
+          "LightColor": "1,0.89069,0.76238,1",
+          "Shadows": true,
+          "SkyColor": "0.10599,0.11132,0.12376,1"
+        }
+      ]
+    },
+    {
+      "Id": "56872292-9211-4604-970b-4c36411575d6",
+      "Name": "Spell Book Pickup",
+      "Enabled": true,
+      "Position": "-272.7795,0,-0.1188373",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "ParticleSystem",
+          "__enabled": false,
+          "Looped": false,
+          "Particles": "particles/book_particle/book_tentacle.vpcf",
+          "PlaybackSpeed": 1
+        },
+        {
+          "__type": "ParticleSystem",
+          "__enabled": false,
+          "Looped": false,
+          "Particles": "particles/book_particle/book_floor_portal.vpcf",
+          "PlaybackSpeed": 1
+        }
+      ],
+      "Children": [
+        {
+          "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,30.2239",
+          "Rotation": "0,0,0.01120243,0.9994944",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/pickups/books/spellbook/spellbook.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ParticleSystem",
+              "__enabled": false,
+              "Looped": false,
+              "Particles": "particles/book_particle/book_glow.vpcf",
+              "PlaybackSpeed": 1
+            },
+            {
+              "__type": "ItemPickupComponent",
+              "__enabled": true,
+              "RespawnTime": 5
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.025,
+              "SpinAngles": "0,45,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "d8465dd6-50ab-4045-94b9-79c12b2b7391",
+      "Name": "Heal Flask Pickup",
+      "Enabled": true,
+      "Position": "-272.7795,75.41854,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "ParticleSystem",
+          "__enabled": false,
+          "Looped": false,
+          "Particles": "particles/sparkle_01.vpcf",
+          "PlaybackSpeed": 1
+        }
+      ],
+      "Children": [
+        {
+          "Id": "63fd4f21-a9c9-4f0b-ba74-84d36583e03b",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,34.05998",
+          "Rotation": "0,0,0.9805323,-0.1938586",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/pickups/flask/flask.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ParticleSystem",
+              "__enabled": false,
+              "Looped": false,
+              "Particles": "particles/sparkle_pickup_01.vpcf",
+              "PlaybackSpeed": 1
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.025,
+              "SpinAngles": "0,45,0"
+            },
+            {
+              "__type": "ItemPickupComponent",
+              "__enabled": true,
+              "RespawnTime": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "3f2cb82a-fd1f-4df4-af61-81a11bcf6a5d",
+      "Name": "Mana Flask Pickup",
+      "Enabled": true,
+      "Position": "-272.7795,156.5228,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "ParticleSystem",
+          "__enabled": false,
+          "Looped": false,
+          "Particles": "particles/sparkle_01.vpcf",
+          "PlaybackSpeed": 1
+        }
+      ],
+      "Children": [
+        {
+          "Id": "56f513ad-a291-4139-8976-150d0d9af8b6",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,30.38456",
+          "Rotation": "0,0,0.04286633,-0.9985606",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/pickups/flask/flask.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ParticleSystem",
+              "__enabled": false,
+              "Looped": false,
+              "Particles": "particles/sparkle_pickup_02.vpcf",
+              "PlaybackSpeed": 1
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.025,
+              "SpinAngles": "0,45,0"
+            },
+            {
+              "__type": "ItemPickupComponent",
+              "__enabled": true,
+              "RespawnTime": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "bb0ce037-37ec-4c85-b895-b74fe580c02b",
+      "Name": "Ice Bolt Staff Pickup",
+      "Enabled": true,
+      "Position": "-272.7795,225.8577,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Children": [
+        {
+          "Id": "c0722526-da7f-4e5f-9779-a36f68ac8b1d",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,17.49548",
+          "Rotation": "0,0,0.320863,-0.9465711",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/weapons/staffs/fireboldstaff/w_iceboltstaff.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.025,
+              "SpinAngles": "0,45,0"
+            },
+            {
+              "__type": "ItemPickupComponent",
+              "__enabled": true,
+              "RespawnTime": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "af2b5db9-9e47-4378-9205-34f2dff531fb",
+      "Name": "Poison Bolt Staff Pickup",
+      "Enabled": true,
+      "Position": "-272.7795,294.2941,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Children": [
+        {
+          "Id": "8271c338-8415-4996-9d25-99b97a26b9d5",
+          "Name": "Model",
+          "Enabled": false,
+          "Position": "0,0,66.9241",
+          "Rotation": "0,0,0.4763142,0.8786905",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "AnimatedModelComponent",
+              "__enabled": true,
+              "CreateBoneObjects": false,
+              "MaterialOverride": null,
+              "Model": "models/weapons/staffs/poisonboltstaff/w_poisonstaff.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.05,
+              "SpinAngles": "0,45,0"
+            },
+            {
+              "__type": "ItemPickupComponent",
+              "__enabled": true,
+              "RespawnTime": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__references": []
+}

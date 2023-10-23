@@ -1,0 +1,32 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "wz_menu_01a",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "wz_menu_01a",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "quack.devgen01b#11249",
+        "facepunch.wall_limestone_brick_large#18706",
+        "facepunch.glass_a_hs#33634",
+        "facepunch.old_iron_a_hs#28963",
+        "crystalsilence.loomingsky#31308",
+        "facepunch.wood_plank_hs_02#33585"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/wz_menu_01a.vmap"
+      }
+    }
+  }
+}
