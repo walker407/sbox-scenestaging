@@ -19,7 +19,7 @@
 							},
 							{
 								from = "sphere.002.vmat"
-								to = "materials/models/test/test_orb/fbmwarp_test.vmat"
+								to = "materials/models/test/test_orb/fbmwarp_test_02.vmat"
 							},
 						]
 						use_global_default = false

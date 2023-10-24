@@ -4,9 +4,9 @@ Layer0
 {
 	shader "shaders/noise/fbmwarp.shader"
 
-	g_Gain "0.5"
-	g_Lacunarity "2"
-	g_Octaves "10"
+	g_Gain "0.9"
+	g_Lacunarity "8"
+	g_Octaves "2"
 	g_Scale "2.0"
 	g_vColor1 "[0.101961 0.619608 0.666667 0.000000]"
 	g_vColor2 "[0.666667 0.666667 0.498039 0.000000]"

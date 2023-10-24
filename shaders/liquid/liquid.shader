@@ -58,6 +58,9 @@ VS
 {
 	#include "common/vertex.hlsl"
 
+	float g_flWobbleX <Attribute("WobbleX"); Range(-8, 4); Default(0);>;
+	float g_flWobbleY <Attribute("WobbleY"); Range(-8, 4); Default(0);>;
+
 	 float3 Unity_RotateAboutAxis_Degrees(float3 In, float3 Axis, float Rotation)
 	{
 		Rotation = radians(Rotation);
@@ -79,11 +82,12 @@ VS
 	{
 		PixelInput i = ProcessVertex( v );
 
-		float3 vPositionWs = i.vPositionWs * v.vPositionOs;
+		float3 vPositionWs = mul(CalculateInstancingObjectToWorldMatrix( INSTANCING_PARAMS( v ) ), v.vPositionOs.xyz);
 
-		float3 worldPosX= Unity_RotateAboutAxis_Degrees(vPositionWs, float3(1,0,0), -90);
+		float3 worldPosX= Unity_RotateAboutAxis_Degrees(vPositionWs, float3(1,0,0), 90);
+		float3 worldPosY= Unity_RotateAboutAxis_Degrees(vPositionWs, float3(0,1,0), 90);
 
-		i.vFillPosition = vPositionWs + worldPosX + worldPosX;
+		i.vFillPosition = normalize(vPositionWs + (worldPosX * g_flWobbleX) + (worldPosY * g_flWobbleY));
 
 		return FinalizeVertex( i );
 	}
@@ -104,7 +108,7 @@ PS
 	{
 		float3 edge = dot(i.vNormalWs, float3(0,0,1));
 
-		float fill = step(i.vFillPosition.z, 0.5);
+		float fill = step(i.vFillPosition.z, 0);
 		
 		float3 color = lerp(g_vFillColorUpper,  g_vFillColorLower, edge.z );
 		float3 colors = lerp(g_vFFoamColor, color, isFrontFace).xyz;

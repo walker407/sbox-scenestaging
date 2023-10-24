@@ -302,8 +302,8 @@
           "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,30.2239",
-          "Rotation": "0,0,0.01120243,0.9994944",
+          "Position": "0,0,24.56215",
+          "Rotation": "0,0,-0.962433,0.2664743",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -358,8 +358,8 @@
           "Id": "63fd4f21-a9c9-4f0b-ba74-84d36583e03b",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,34.05998",
-          "Rotation": "0,0,0.9805323,-0.1938586",
+          "Position": "0,0,28.76841",
+          "Rotation": "0.00000001815155,0.00000003647947,0.8951369,-0.4454052",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -414,8 +414,8 @@
           "Id": "56f513ad-a291-4139-8976-150d0d9af8b6",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,30.38456",
-          "Rotation": "0,0,0.04286633,-0.9985606",
+          "Position": "0,0,43.27406",
+          "Rotation": "-0.0000002805718,-0,0,1",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -436,7 +436,7 @@
             },
             {
               "__type": "BobAndSpinComponent",
-              "__enabled": true,
+              "__enabled": false,
               "Amplitude": 0.025,
               "SpinAngles": "0,45,0"
             },
@@ -461,8 +461,8 @@
           "Id": "c0722526-da7f-4e5f-9779-a36f68ac8b1d",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,17.49548",
-          "Rotation": "0,0,0.320863,-0.9465711",
+          "Position": "0,0,11.8333",
+          "Rotation": "0,0,0.9962438,0.06776406",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -528,7 +528,181 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "3c25c8df-2ed5-41c1-a7f6-8c55c70ebf1b",
+      "Name": "Test Orb",
+      "Enabled": true,
+      "Position": "0,-205.6426,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.65,0.65,0.65",
+      "Components": [
+        {
+          "__type": "ColliderBoxComponent",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Scale": "50,57.39999,230.5329",
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "1b643e9b-82e2-41f5-897d-f72684239821",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,84",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/test/test_orb_fbmwarp.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "c0de7d16-c2db-466c-bd65-bb2ae7595dd3",
+          "Name": "Cube",
+          "Enabled": true,
+          "Position": "0,0,25",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "30673476-bf56-45ac-b9ba-268cbfa48c95",
+      "Name": "Test Orb",
+      "Enabled": true,
+      "Position": "0,-355.4166,5.161822",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.65,0.65,0.65",
+      "Components": [
+        {
+          "__type": "ColliderBoxComponent",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Scale": "50,57.39999,230.5329",
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "de37c91b-b14b-49c1-8ce5-2d32f194aecc",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,84",
+          "Rotation": "0.03514594,0,0,0.9993826",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/test/test_orb.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "d7bef431-ec4d-4cfa-a8b3-360ec12b0402",
+          "Name": "Cube",
+          "Enabled": true,
+          "Position": "0,0,25",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "506b587c-76c3-4506-9934-f256ec569b07",
+      "Name": "Test Orb",
+      "Enabled": true,
+      "Position": "0,-271.5429,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.65,0.65,0.65",
+      "Children": [
+        {
+          "Id": "a224c44c-3d09-4874-aeb0-c8e7e86926a8",
+          "Name": "Model",
+          "Enabled": true,
+          "Position": "0,0,84",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/test/test_orb_fbmwarp_02.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "e32be1fc-3a06-4a25-b9bc-6e8fb495a445",
+          "Name": "Cube",
+          "Enabled": true,
+          "Position": "0,0,25",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Components": [
+            {
+              "__type": "ModelComponent",
+              "__enabled": true,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "ShouldCastShadows": true,
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "eab572b6-9cb7-4b0e-a5dd-938754d39686",
+      "Name": "SkyBox",
+      "Enabled": true,
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "materials/skybox/kloppenheim_05_puresky.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
-  "__references": []
+  "__references": [
+    "polyhaven.kloppenheim_05_puresky"
+  ]
 }

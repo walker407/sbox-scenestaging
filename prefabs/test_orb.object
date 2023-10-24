@@ -1,0 +1,49 @@
+{
+  "RootObject": {
+    "Id": "3c25c8df-2ed5-41c1-a7f6-8c55c70ebf1b",
+    "Name": "Test Orb",
+    "Enabled": true,
+    "Position": "0,-212.4425,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "0.65,0.65,0.65",
+    "Children": [
+      {
+        "Id": "1b643e9b-82e2-41f5-897d-f72684239821",
+        "Name": "Model",
+        "Enabled": true,
+        "Position": "0,0,84",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "MaterialOverride": null,
+            "Model": "models/test/test_orb_fbmwarp.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "Id": "c0de7d16-c2db-466c-bd65-bb2ae7595dd3",
+        "Name": "Cube",
+        "Enabled": true,
+        "Position": "0,0,25",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Components": [
+          {
+            "__type": "ModelComponent",
+            "__enabled": true,
+            "MaterialOverride": null,
+            "Model": "models/dev/box.vmdl",
+            "ShouldCastShadows": true,
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "__references": []
+}

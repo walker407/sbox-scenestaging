@@ -23,8 +23,12 @@ public partial class ItemPickupComponent : BaseComponent
 			//Log.Info( "Respawning..." );
 		}
 
-		GameObject.GetComponent<AnimatedModelComponent>().SceneObject.RenderingEnabled = Available;
+		
 
+		if( GameObject.GetComponent<AnimatedModelComponent>().SceneObject is SceneObject model)
+		{
+			model.RenderingEnabled = Available;
+		}
 	}
 
 	public void Pickup()
