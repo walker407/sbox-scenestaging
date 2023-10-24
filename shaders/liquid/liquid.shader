@@ -5,8 +5,6 @@ HEADER
 	Description = "Liquid Shader for S&box";
 }
 
-
-
 //=========================================================================================================================
 
 FEATURES
@@ -33,7 +31,6 @@ COMMON
 
 	#define CULL_MODE_ALREADY_SET
     #define DEPTH_STATE_ALREADY_SET
-	
 }
 
 //=========================================================================================================================
@@ -61,21 +58,32 @@ VS
 	float g_flWobbleX <Attribute("WobbleX"); Range(-8, 4); Default(0);>;
 	float g_flWobbleY <Attribute("WobbleY"); Range(-8, 4); Default(0);>;
 
-	 float3 Unity_RotateAboutAxis_Degrees(float3 In, float3 Axis, float Rotation)
+	float3 RotateAroundX(float3 position, float degrees) 
 	{
-		Rotation = radians(Rotation);
-		float s = sin(Rotation);
-		float c = cos(Rotation);
-		float one_minus_c = 1.0 - c;
+		degrees = radians(degrees);
 
-		Axis = normalize(Axis);
-		float3x3 rot_mat = 
-		{   one_minus_c * Axis.x * Axis.x + c, one_minus_c * Axis.x * Axis.y - Axis.z * s, one_minus_c * Axis.z * Axis.x + Axis.y * s,
-			one_minus_c * Axis.x * Axis.y + Axis.z * s, one_minus_c * Axis.y * Axis.y + c, one_minus_c * Axis.y * Axis.z - Axis.x * s,
-			one_minus_c * Axis.z * Axis.x - Axis.y * s, one_minus_c * Axis.y * Axis.z + Axis.x * s, one_minus_c * Axis.z * Axis.z + c
+		float3x3 mat = 
+		{
+			1, 0, 0,
+			0, cos(degrees), -sin(degrees),
+			0, sin(degrees), cos(degrees)	
 		};
-		float3 Out = mul(rot_mat,  In);
-		return Out;
+
+		return mul(mat, position);
+	}
+
+	float3 RotateAroundY(float3 position, float degrees)
+	{
+		degrees = radians(degrees);
+
+		float3x3 mat = 
+		{
+			cos(degrees), 0, sin(degrees),
+			0, 1, 0,
+			-sin(degrees), 0, cos(degrees)	
+		};
+
+		return mul(mat, position);
 	}
 
 	PixelInput MainVs( VertexInput v )
@@ -84,8 +92,8 @@ VS
 
 		float3 vPositionWs = mul(CalculateInstancingObjectToWorldMatrix( INSTANCING_PARAMS( v ) ), v.vPositionOs.xyz);
 
-		float3 worldPosX= Unity_RotateAboutAxis_Degrees(vPositionWs, float3(1,0,0), 90);
-		float3 worldPosY= Unity_RotateAboutAxis_Degrees(vPositionWs, float3(0,1,0), 90);
+		float3 worldPosX = RotateAroundX(vPositionWs, 90);
+		float3 worldPosY = RotateAroundY(vPositionWs, 90);
 
 		i.vFillPosition = normalize(vPositionWs + (worldPosX * g_flWobbleX) + (worldPosY * g_flWobbleY));
 
@@ -106,11 +114,9 @@ PS
 
 	float4 MainPs( PixelInput i, bool isFrontFace : SV_IsFrontFace ) : SV_Target0
 	{
-		float3 edge = dot(i.vNormalWs, float3(0,0,1));
-
 		float fill = step(i.vFillPosition.z, 0);
 		
-		float3 color = lerp(g_vFillColorUpper,  g_vFillColorLower, edge.z );
+		float3 color = lerp(g_vFillColorUpper,  g_vFillColorLower, i.vFillPosition.z );
 		float3 colors = lerp(g_vFFoamColor, color, isFrontFace).xyz;
 		
 		return float4(colors, fill);

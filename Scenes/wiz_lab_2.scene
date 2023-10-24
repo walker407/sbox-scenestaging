@@ -302,8 +302,8 @@
           "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,24.56215",
-          "Rotation": "0,0,-0.962433,0.2664743",
+          "Position": "0,0,26.51236",
+          "Rotation": "0,0,-0.9587562,-0.2780226",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -358,8 +358,8 @@
           "Id": "63fd4f21-a9c9-4f0b-ba74-84d36583e03b",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,28.76841",
-          "Rotation": "0.00000001815155,0.00000003647947,0.8951369,-0.4454052",
+          "Position": "0,0,30.71826",
+          "Rotation": "-0.000000003687044,0.00000004057403,0.9951867,0.09046666",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -414,8 +414,8 @@
           "Id": "56f513ad-a291-4139-8976-150d0d9af8b6",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,43.27406",
-          "Rotation": "-0.0000002805718,-0,0,1",
+          "Position": "-50.25132,0.8588275,24.03749",
+          "Rotation": "-0.03342512,0.04187769,0.05569716,-0.9970089",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -444,6 +444,13 @@
               "__type": "ItemPickupComponent",
               "__enabled": true,
               "RespawnTime": 5
+            },
+            {
+              "__type": "LiquidComponent",
+              "__enabled": true,
+              "MaxWobble": 0.04,
+              "WobbleX": 8,
+              "WobbleY": 0
             }
           ]
         }
@@ -461,8 +468,8 @@
           "Id": "c0722526-da7f-4e5f-9779-a36f68ac8b1d",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,11.8333",
-          "Rotation": "0,0,0.9962438,0.06776406",
+          "Position": "0,0,13.78411",
+          "Rotation": "0,0,0.8122237,0.5801822",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -610,12 +617,20 @@
           "Scale": "1,1,1",
           "Components": [
             {
-              "__type": "ModelComponent",
+              "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "CreateBoneObjects": false,
               "MaterialOverride": null,
               "Model": "models/test/test_orb.vmdl",
               "ShouldCastShadows": true,
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "LiquidComponent",
+              "__enabled": true,
+              "MaxWobble": 0.03,
+              "WobbleX": 0,
+              "WobbleY": 0
             }
           ]
         },
