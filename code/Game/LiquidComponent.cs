@@ -9,8 +9,6 @@ public sealed class LiquidComponent : BaseComponent, BaseComponent.ExecuteInEdit
 
 	float BobTime { get; set; } = 0.75f;
 
-	float WobbleAmountX;
-	float WobbleAmountY;
 	float WobbleAmountAddX;
 	float WobbleAmountAddY;
 
@@ -30,11 +28,11 @@ public sealed class LiquidComponent : BaseComponent, BaseComponent.ExecuteInEdit
 
 			var pulse = 2f * (float)Math.PI * 1f;
 
-			WobbleAmountX = WobbleAmountAddX * (float)Math.Sin( pulse * BobTime );
-			WobbleAmountY = WobbleAmountAddY * (float)Math.Sin( pulse * BobTime );
+			var wobbleAmountX = WobbleAmountAddX * (float)Math.Sin( pulse * BobTime );
+			var wobbleAmountY = WobbleAmountAddY * (float)Math.Sin( pulse * BobTime );
 
-			model.Attributes.Set( "WobbleX", WobbleAmountX );
-			model.Attributes.Set( "WobbleY", WobbleAmountY );
+			model.Attributes.Set( "WobbleX", wobbleAmountX );
+			model.Attributes.Set( "WobbleY", wobbleAmountY );
 
 			var velocity = (LastPosition - Transform.Position) / Time.Delta;
 			var angularVelocity = Transform.Rotation.Angles().AsVector3() - LastRotation;

@@ -85,7 +85,7 @@ VS
 
 		return mul(mat, position);
 	}
-
+	
 	PixelInput MainVs( VertexInput v )
 	{
 		PixelInput i = ProcessVertex( v );
