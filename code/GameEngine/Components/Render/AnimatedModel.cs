@@ -39,9 +39,23 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 		}
 	}
 
+	string _materialGroup;
+
+	[Property]
+	public string MaterialGroup
+	{
+		get => _materialGroup;
+		set
+		{
+			if ( _materialGroup == value ) return;
+
+			_materialGroup = value;
+			_sceneObject?.SetMaterialGroup( _materialGroup );
+		}
+	}
+
 
 	Color _tint = Color.White;
-
 	[Property]
 	public Color Tint
 	{
@@ -125,6 +139,23 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 		}
 	}
 
+	ulong _bodyGroupsMask = ulong.MaxValue;
+	[Property, Model.BodyGroupMask]
+	public ulong BodyGroups
+	{
+		get => _bodyGroupsMask;
+		set
+		{
+			if ( _bodyGroupsMask == value ) return;
+			_bodyGroupsMask = value;
+
+			if ( _sceneObject is not null )
+			{
+				_sceneObject.MeshGroupMask = _bodyGroupsMask;
+			}
+		}
+	}
+
 
 	public string TestString { get; set; }
 
@@ -182,12 +213,18 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 		_sceneObject.SetMaterialOverride( MaterialOverride );
 		_sceneObject.ColorTint = Tint;
 		_sceneObject.Flags.CastShadows = _castShadows;
+		_sceneObject?.SetMaterialGroup( _materialGroup );
+		_sceneObject.MeshGroupMask = _bodyGroupsMask;
 		_sceneObject.Update( 0.01f );
+		_sceneObject.OnFootstepEvent += InternalOnFootstep;
+		_sceneObject.Tags.SetFrom( GameObject.Tags );
 
 		_boneMergeTarget?.SetBoneMerge( this, true );
 
 		BuildBoneHeirarchy( GameObject );
 	}
+
+
 
 	public override void OnDisabled()
 	{
@@ -202,6 +239,16 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 		AnimationUpdate();
 	}
 
+	public void PostAnimationUpdate()
+	{
+		ThreadSafe.AssertIsMainThread();
+
+		if ( !_sceneObject.IsValid() )
+			return;
+
+		_sceneObject.RunPendingEvents();
+	}
+
 	void AnimationUpdate()
 	{
 		if ( !_sceneObject.IsValid() )
@@ -211,7 +258,15 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 			return;
 
 		_sceneObject.Transform = Transform.World;
-		_sceneObject.Update( Scene.IsEditor ? 0.0f : Time.Delta );
+
+		if ( Scene.IsEditor )
+		{
+			_sceneObject.UpdateToBindPose();
+		}
+		else
+		{
+			_sceneObject.Update( Scene.IsEditor ? 0.0f : Time.Delta );
+		}		
 
 		MergeChildren();
 	}
@@ -234,11 +289,17 @@ public sealed partial class AnimatedModelComponent : BaseComponent, BaseComponen
 			return;
 
 		AnimationUpdate();
+		PostAnimationUpdate();
 	}
 
-	protected override void OnPreRender()
-	{
+	/// <summary>
+	/// Called when a footstep event happens
+	/// </summary>
+	public Action<SceneModel.FootstepEvent> OnFootstepEvent { get; set; }
 
+	private void InternalOnFootstep( SceneModel.FootstepEvent e )
+	{
+		OnFootstepEvent?.Invoke( e );
 	}
 
 }
