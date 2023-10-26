@@ -7,10 +7,12 @@
       "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "20,20,20",
+      "Tags": "",
       "Components": [
         {
           "__type": "ModelComponent",
           "__enabled": true,
+          "BodyGroups": 18446744073709551615,
           "MaterialOverride": "materials/shine.vmat",
           "Model": "models/dev/plane.vmdl",
           "ShouldCastShadows": true,
@@ -32,6 +34,7 @@
       "Position": "-75.62699,0,4",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "CharacterController",
@@ -39,6 +42,7 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 71.05,
+          "IgnoreLayers": "",
           "Radius": 11.65,
           "StepHeight": 18
         },
@@ -70,11 +74,14 @@
           "Position": "0,-0.66093,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/citizen/citizen.vmdl",
               "ShouldCastShadows": true,
@@ -89,6 +96,7 @@
               "Position": "-0.000001814945,0.1895752,80.7357",
               "Rotation": "-0.00000005960058,0.000000000000005518709,-0.9999317,0.01167414",
               "Scale": "1,1,1",
+              "Tags": "",
               "Components": [
                 {
                   "__type": "WorldPanel",
@@ -115,6 +123,7 @@
           "Position": "-200,0,64",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "CameraComponent",
@@ -192,7 +201,8 @@
           "Enabled": true,
           "Position": "0,0,64",
           "Rotation": "0,0,0,1",
-          "Scale": "1,1,1"
+          "Scale": "1,1,1",
+          "Tags": ""
         },
         {
           "Id": "f14db027-d364-497b-8fa4-e83d67466d21",
@@ -201,12 +211,15 @@
           "Position": "0,0,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "BoneMergeTarget": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/citizen_clothes/hair/hair_fade/models/hair_fade.vmdl",
               "ShouldCastShadows": true,
@@ -221,12 +234,15 @@
           "Position": "0,0,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "BoneMergeTarget": "7e2eedaf-7d17-4e3b-8f35-e39bbced676e",
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/citizen_clothes/shoes/boots/models/army_boots.vmdl",
               "ShouldCastShadows": true,
@@ -243,6 +259,7 @@
       "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "EnvmapComponent",
@@ -264,6 +281,7 @@
       "Position": "0,0,0",
       "Rotation": "0.8894004,0.1914825,-0.4057941,0.087365",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "DirectionalLightComponent",
@@ -281,6 +299,7 @@
       "Position": "-272.7795,0,-0.1188373",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "ParticleSystem",
@@ -302,14 +321,17 @@
           "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,17.90685",
-          "Rotation": "0,0,-0.9218497,0.3816461",
+          "Position": "0,0,19.59823",
+          "Rotation": "0,0,0.7243947,-0.6860738",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/pickups/books/spellbook/spellbook.vmdl",
               "ShouldCastShadows": true,
@@ -344,6 +366,7 @@
       "Position": "-272.7795,75.41854,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "ParticleSystem",
@@ -358,14 +381,17 @@
           "Id": "63fd4f21-a9c9-4f0b-ba74-84d36583e03b",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,22.11242",
-          "Rotation": "0.00000002246516,0.00000003398244,0.8331332,-0.5507305",
+          "Position": "0,0,23.80382",
+          "Rotation": "-0.00000003313237,-0.000000023701,-0.5810786,0.8122512",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/pickups/flask/flask.vmdl",
               "ShouldCastShadows": true,
@@ -400,6 +426,7 @@
       "Position": "-272.7795,156.5228,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "ParticleSystem",
@@ -414,14 +441,17 @@
           "Id": "56f513ad-a291-4139-8976-150d0d9af8b6",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,29.61867",
-          "Rotation": "0.2182225,0.05672219,0.2450913,-0.9429088",
+          "Position": "0,0,31.31",
+          "Rotation": "-0.2240754,0.02507006,0.1083241,0.968204",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/pickups/flask/flask.vmdl",
               "ShouldCastShadows": true,
@@ -463,19 +493,23 @@
       "Position": "-272.7795,225.8577,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Children": [
         {
           "Id": "c0722526-da7f-4e5f-9779-a36f68ac8b1d",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,5.179399",
-          "Rotation": "0,0,0.9961435,-0.05434217",
+          "Position": "0,0,6.870749",
+          "Rotation": "0,0,-0.9108287,0.4069874",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/weapons/staffs/fireboldstaff/w_iceboltstaff.vmdl",
               "ShouldCastShadows": true,
@@ -503,6 +537,7 @@
       "Position": "-272.7795,294.2941,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Children": [
         {
           "Id": "8271c338-8415-4996-9d25-99b97a26b9d5",
@@ -511,11 +546,14 @@
           "Position": "0,0,66.9241",
           "Rotation": "0,0,0.4763142,0.8786905",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/weapons/staffs/poisonboltstaff/w_poisonstaff.vmdl",
               "ShouldCastShadows": true,
@@ -543,6 +581,7 @@
       "Position": "0,-205.6426,0",
       "Rotation": "0,0,0,1",
       "Scale": "0.65,0.65,0.65",
+      "Tags": "",
       "Components": [
         {
           "__type": "ColliderBoxComponent",
@@ -560,10 +599,12 @@
           "Position": "0,0,84",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "ModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "MaterialOverride": null,
               "Model": "models/test/test_orb_fbmwarp.vmdl",
               "ShouldCastShadows": true,
@@ -578,10 +619,12 @@
           "Position": "0,0,25",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "ModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "ShouldCastShadows": true,
@@ -598,6 +641,7 @@
       "Position": "0,-355.4166,0",
       "Rotation": "0,0,0,1",
       "Scale": "0.65,0.65,0.65",
+      "Tags": "",
       "Components": [
         {
           "__type": "ColliderBoxComponent",
@@ -612,14 +656,17 @@
           "Id": "de37c91b-b14b-49c1-8ce5-2d32f194aecc",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,84.45027",
-          "Rotation": "0,0,0.7323279,0.6809449",
+          "Position": "0,0,87.83206",
+          "Rotation": "0,0,-0.9274109,-0.3740107",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "AnimatedModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "CreateBoneObjects": false,
+              "MaterialGroup": null,
               "MaterialOverride": null,
               "Model": "models/test/test_orb.vmdl",
               "ShouldCastShadows": true,
@@ -647,10 +694,12 @@
           "Position": "0,0,25",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "ModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "ShouldCastShadows": true,
@@ -667,6 +716,7 @@
       "Position": "0,-271.5429,0",
       "Rotation": "0,0,0,1",
       "Scale": "0.65,0.65,0.65",
+      "Tags": "",
       "Children": [
         {
           "Id": "a224c44c-3d09-4874-aeb0-c8e7e86926a8",
@@ -675,10 +725,12 @@
           "Position": "0,0,84",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "ModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "MaterialOverride": null,
               "Model": "models/test/test_orb_fbmwarp_02.vmdl",
               "ShouldCastShadows": true,
@@ -693,10 +745,12 @@
           "Position": "0,0,25",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
+          "Tags": "",
           "Components": [
             {
               "__type": "ModelComponent",
               "__enabled": true,
+              "BodyGroups": 18446744073709551615,
               "MaterialOverride": null,
               "Model": "models/dev/box.vmdl",
               "ShouldCastShadows": true,
@@ -713,11 +767,32 @@
       "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "",
       "Components": [
         {
           "__type": "SkyBox2D",
           "__enabled": true,
           "SkyMaterial": "materials/skybox/kloppenheim_05_puresky.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "12b44913-c3c9-4bc0-90c1-cb9b737470ba",
+      "Name": "Plane",
+      "Enabled": true,
+      "Position": "-877.9722,0.0000000000000003807597,159.9846",
+      "Rotation": "0.0000000000004547474,0.7071065,0.0000000000004547474,0.707107",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "ModelComponent",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/models/test/test_orb/fbmwarp_test_02.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "ShouldCastShadows": true,
           "Tint": "1,1,1,1"
         }
       ]

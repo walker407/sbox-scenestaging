@@ -1,0 +1,56 @@
+{
+  "GameObjects": [
+    {
+      "Id": "0eedb4a2-bfee-4aa1-9e93-b50970a727c3",
+      "Name": "Plane",
+      "Enabled": true,
+      "Position": "3000,0,0",
+      "Rotation": "-0.7069851,-0.0000004522993,0.7072284,-0.0000004524549",
+      "Scale": "25,25,25",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "ModelComponent",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialOverride": "materials/models/test/test_orb/fbmwarp_test_02.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "ShouldCastShadows": true,
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "54da1382-3605-4bf4-abaa-51984b551c0c",
+      "Name": "Camera",
+      "Enabled": true,
+      "Position": "0,0,-116.8219",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0,0,0,1",
+          "ClearFlags": "Color, Depth, Stencil",
+          "FieldOfView": 75,
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "SpinComponent",
+          "__enabled": false,
+          "SpinAngles": "0,45,0"
+        },
+        {
+          "__type": "BobAndSpinComponent",
+          "__enabled": true,
+          "Amplitude": 0.5,
+          "SpinAngles": "0,0,0"
+        }
+      ]
+    }
+  ],
+  "__references": []
+}
