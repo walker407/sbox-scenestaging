@@ -302,8 +302,8 @@
           "Id": "51228917-bc4b-43af-8a9b-212f8c371082",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,23.03881",
-          "Rotation": "0,0,-0.9582345,-0.2781264",
+          "Position": "0,0,17.90685",
+          "Rotation": "0,0,-0.9218497,0.3816461",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -358,8 +358,8 @@
           "Id": "63fd4f21-a9c9-4f0b-ba74-84d36583e03b",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,27.24441",
-          "Rotation": "-0.000000003696793,0.00000004056835,0.994635,0.09067638",
+          "Position": "0,0,22.11242",
+          "Rotation": "0.00000002246516,0.00000003398244,0.8331332,-0.5507305",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -414,8 +414,8 @@
           "Id": "56f513ad-a291-4139-8976-150d0d9af8b6",
           "Name": "Model",
           "Enabled": true,
-          "Position": "-52.16935,-50.59631,34.87237",
-          "Rotation": "0.006265973,0.148605,0.9880868,0.03951675",
+          "Position": "0,0,29.61867",
+          "Rotation": "0.2182225,0.05672219,0.2450913,-0.9429088",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -436,7 +436,7 @@
             },
             {
               "__type": "BobAndSpinComponent",
-              "__enabled": false,
+              "__enabled": true,
               "Amplitude": 0.025,
               "SpinAngles": "0,45,0"
             },
@@ -448,8 +448,8 @@
             {
               "__type": "LiquidComponent",
               "__enabled": true,
-              "MaxWobble": 0.04,
-              "WobbleX": 8,
+              "MaxWobble": 0.001,
+              "WobbleX": 0,
               "WobbleY": 0
             }
           ]
@@ -468,8 +468,8 @@
           "Id": "c0722526-da7f-4e5f-9779-a36f68ac8b1d",
           "Name": "Model",
           "Enabled": true,
-          "Position": "0,0,10.31141",
-          "Rotation": "0,0,0.8116969,0.5800954",
+          "Position": "0,0,5.179399",
+          "Rotation": "0,0,0.9961435,-0.05434217",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -595,7 +595,7 @@
       "Id": "30673476-bf56-45ac-b9ba-268cbfa48c95",
       "Name": "Test Orb",
       "Enabled": true,
-      "Position": "0,-355.4166,14.81427",
+      "Position": "0,-355.4166,0",
       "Rotation": "0,0,0,1",
       "Scale": "0.65,0.65,0.65",
       "Components": [
@@ -612,8 +612,8 @@
           "Id": "de37c91b-b14b-49c1-8ce5-2d32f194aecc",
           "Name": "Model",
           "Enabled": true,
-          "Position": "98.98733,-131.5134,43.33437",
-          "Rotation": "0.03514594,0,0,0.9993826",
+          "Position": "0,0,84.45027",
+          "Rotation": "0,0,0.7323279,0.6809449",
           "Scale": "1,1,1",
           "Components": [
             {
@@ -628,9 +628,15 @@
             {
               "__type": "LiquidComponent",
               "__enabled": true,
-              "MaxWobble": 0.03,
+              "MaxWobble": 0.002,
               "WobbleX": 0,
               "WobbleY": 0
+            },
+            {
+              "__type": "BobAndSpinComponent",
+              "__enabled": true,
+              "Amplitude": 0.05,
+              "SpinAngles": "0,45,0"
             }
           ]
         },

@@ -7,9 +7,9 @@ Layer0
 	//---- Rendering ----
 	F_RENDER_BACKFACES 1
 
-	g_vFFoamColor "[0.000000 0.600000 0.701961 0.000000]"
+	g_vFFoamColor "[0.105882 0.811765 0.717647 1.000000]"
 	g_vFillColorLower "[0.000000 0.000000 1.000000 0.000000]"
-	g_vFillColorUpper "[0.000000 0.501961 0.501961 0.000000]"
+	g_vFillColorUpper "[0.027451 0.709804 0.627451 0.000000]"
 
 	//---- Material ----
 	TextureColor "materials/default/default_color.tga"

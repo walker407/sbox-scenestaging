@@ -15,7 +15,7 @@
 						[
 							{
 								from = "sphere.003.vmat"
-								to = "materials/glass_base.vmat"
+								to = "materials/glass/glass_a.vmat"
 							},
 							{
 								from = "sphere.002.vmat"
